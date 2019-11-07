@@ -96,8 +96,7 @@ class Car {
       this.odometer += fuel;
       this.tank = 0;
       return `I ran out of fuel at ${this.odometer} miles!`;
-    }
-    else {
+    } else {
       this.odometer += distance;
       this.tank -= gallons;
     }
@@ -196,9 +195,6 @@ class Student extends Lambdasian{
   sprintChallenge(subject) {
     return `${this.name} has begun sprint challenge on ${subject}`;
   }
-
-
-
 }
 
 /*
@@ -214,7 +210,20 @@ class Student extends Lambdasian{
         + `standUp` a method that takes in a slack channel and returns `{name} announces to {channel}, @channel standy times!`
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
-class ProjectManager {
+class ProjectManager extends Instructor {
+  constructor(lambda) {
+    super(lambda);
+    this.gradClassName = lambda.gradClassName;
+    this.favInstructor = lambda.favInstructor;
+    }
+
+    standUp(channel) {
+      return `${this.name} announces to ${channel}, @channel standy time!`;
+    }
+
+    debugsCode(student, subject) {
+      return `${this.name} debugs ${student.name}'s code on ${subject}`;
+    }
 
 }
 
