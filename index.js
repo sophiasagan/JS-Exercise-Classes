@@ -182,9 +182,22 @@ class Student extends Lambdasian{
     this.previousBackground = lambda.previousBackground;
     this.className = lambda.className;
     this.favSubjects = lambda.favSubjects;
+    this.favSubjects.push();
   }
 
-  
+  listSubjects() {
+    return this.favSubjects.toString();
+  }
+
+  PRAssignment(subject) {
+    return `${this.name} has submitted a PR for ${subject}`;
+  }
+
+  sprintChallenge(subject) {
+    return `${this.name} has begun sprint challenge on ${subject}`;
+  }
+
+
 
 }
 
