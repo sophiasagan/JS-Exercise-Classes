@@ -206,9 +206,9 @@ class Student extends Lambdasian{
 
   graduate(){
     if (this.grade >= 70) {
-      return `Student is ready to graduate!`;
+      return `Awesome! Time to graduate!`;
     } else {
-      return `Keep trying. Remember you can flex and keep working. Don't give up!`;
+      return `Keep trying ${this.name}. Remember, you can flex and keep working. Don't give up!`;
     }
   }
 }
